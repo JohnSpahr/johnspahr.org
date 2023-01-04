@@ -1,0 +1,134 @@
+/* johnspahr.org stylesheet - (c) John Spahr */
+
+
+/* ---HEADER/FOOTER--- */
+
+.tbBox {
+    background-color: #fefefe;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+nav {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+nav a,
+nav a:visited {
+    color: #555;
+    margin: 10px;
+}
+
+
+/* ---SECTIONS LIST--- */
+
+.sectionsListItem {
+    background-color: #fefefe;
+    max-width: 600px;
+    border: 2px solid #555;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.sectionsListItem hr {
+    background-color: #555;
+    border: 1px solid #555;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sectionsListItem h4 {
+    margin-bottom: 5px;
+}
+
+.sectionImage {
+    width: 52px;
+    height: auto;
+    margin: 5px 10px 5px 5px;
+    border-radius: 25px;
+}
+
+.sectionContent {
+    padding: 10px;
+}
+
+.banner {
+    background-color: #ddd;
+    display: flex;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+
+/* ---GENERAL PAGE STUFF--- */
+
+html,
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 0px 0px 0px;
+    background-color: #ddd;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #4458be;
+}
+
+a:hover {
+    text-shadow: 0px 0px 2px #ccc;
+}
+
+.logo {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-color: #a5a5a5;
+    border: #a5a5a5 4px solid;
+    border-radius: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    padding: 0px;
+    margin: 0px;
+    background-color: #4458be;
+    border: 2px solid #4458be;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content .button,
+.spamspan {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 8px;
+    background-color: #555;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.content .button:hover,
+.menuBtn:hover,
+.spamspan:hover {
+    background-color: #4458be;
+}
