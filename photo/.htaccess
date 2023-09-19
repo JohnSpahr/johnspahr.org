@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 404 https://johnspahr.org/404.html
+
+Options +Indexes
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:tectrasystems.org
+Header always set Content-Security-Policy: upgrade-insecure-requests
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:tectrasystems.org
+

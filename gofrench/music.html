@@ -1,0 +1,83 @@
+<!--
+   ______      ______                     __       __                 __      __             _____             __        
+  / ____/___  / ____/_______  ____  _____/ /_     / /_  __  __       / /___  / /_  ____     / ___/____  ____ _/ /_  _____
+ / / __/ __ \/ /_  / ___/ _ \/ __ \/ ___/ __ \   / __ \/ / / /  __  / / __ \/ __ \/ __ \    \__ \/ __ \/ __ `/ __ \/ ___/
+/ /_/ / /_/ / __/ / /  /  __/ / / / /__/ / / /  / /_/ / /_/ /  / /_/ / /_/ / / / / / / /   ___/ / /_/ / /_/ / / / / /    
+\____/\____/_/   /_/   \___/_/ /_/\___/_/ /_/  /_.___/\__, /   \____/\____/_/ /_/_/ /_/   /____/ .___/\__,_/_/ /_/_/     
+                                                     /____/                                   /_/                        
+                                                     
+Copyright (c) John Spahr, 2019-2023. 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Page Title! -->
+    <title>GoFrench - GoListen</title>
+
+    <!-- Meta Stuff -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="John Spahr" />
+    <meta property="og:title" content="GoFrench: Your Portal for French Resources!" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="gofrench.png" />
+    <meta property="og:description" content="GoFrench is a portal to resources for learning French! It lets you quickly look up words and phrases, and it makes it easy to find helpful resources for learning and mastering the language." />
+    <meta name="description" content="GoFrench is a portal to resources for learning French! It lets you quickly look up words and phrases, and it makes it easy to find helpful resources for learning and mastering the language." />
+    <meta name="theme-color" content="#7ab6ff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ac7284406a.js" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainstyle.css" />
+
+    <!-- JQUERY and HTML2Canvas Script -->
+    <script type="text/javascript" src="./jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="./html2canvas.min.js"></script>
+
+    <!-- Music Script -->
+    <script type="text/javascript" src="music.js"></script>
+
+    <!-- Favicon and Theme Stuff -->
+    <link rel="apple-touch-icon" href="gofrench.png" sizes="180x180" />
+    <link rel="icon" href="gofrench.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="gofrench.png" sizes="16x16" type="image/png" />
+</head>
+
+<body onload="loadSong()">
+    <!-- Title Bar -->
+    <div class="titleBar sticky">
+        <span class="menuToggle" onclick="goHome()"><span class="logo">GoFrench</span></span>
+    </div>
+
+    <!-- Main Stuff -->
+    <main>
+        <div class="cardIsland topMargin">
+            <h1><i class="fa-solid fa-music"></i>&nbsp;Musique française</h1>
+            <hr>
+            <div id="musicPlayer"></div>
+            <p style="margin-top: 10px;">Some videos cannot be embedded due to copyright reasons. Click "Watch on YouTube" to open a video.</p>
+            <hr>
+            <h4 id="titleLbl">Quel est le titre de la chanson?</h4>
+            <textarea id="titleTxt" style="resize: vertical;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez votre réponse ici..."></textarea>
+            <h4 id="artistLbl">Qui est/sont le(s) artiste(s)?</h4>
+            <textarea id="artistTxt" style="resize: vertical;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez votre réponse ici..."></textarea>
+            <h4 id="messageLbl">Quel est le message de la chanson? De quoi s'agit-il?</h4>
+            <textarea id="messageTxt" style="resize: vertical;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez votre réponse ici..."></textarea>
+            <h4 id="opinionLbl">Aimez-vous la chanson? Qu'en pensez-vous?</h4>
+            <textarea id="opinionTxt" style="resize: vertical;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez votre réponse ici..."></textarea>
+            <hr>
+            <button onclick="saveResponses()"><i class="fa-solid fa-save"></i>&nbsp;Enregistrer les réponses</button>
+        </div>
+        <div id="responseSheet" style="display: none;" class="cardIsland topMargin bigText"></div>
+    </main>
+</body>
+
+</html>

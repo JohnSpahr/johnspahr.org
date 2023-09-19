@@ -1,0 +1,74 @@
+<!--
+   ______      ______                     __       __                 __      __             _____             __        
+  / ____/___  / ____/_______  ____  _____/ /_     / /_  __  __       / /___  / /_  ____     / ___/____  ____ _/ /_  _____
+ / / __/ __ \/ /_  / ___/ _ \/ __ \/ ___/ __ \   / __ \/ / / /  __  / / __ \/ __ \/ __ \    \__ \/ __ \/ __ `/ __ \/ ___/
+/ /_/ / /_/ / __/ / /  /  __/ / / / /__/ / / /  / /_/ / /_/ /  / /_/ / /_/ / / / / / / /   ___/ / /_/ / /_/ / / / / /    
+\____/\____/_/   /_/   \___/_/ /_/\___/_/ /_/  /_.___/\__, /   \____/\____/_/ /_/_/ /_/   /____/ .___/\__,_/_/ /_/_/     
+                                                     /____/                                   /_/                        
+                                                     
+Copyright (c) John Spahr, 2019-2023. 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Page Title! -->
+    <title>GoFrench - Convo</title>
+
+    <!-- Meta Stuff -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="John Spahr" />
+    <meta property="og:title" content="GoFrench: Your Portal for French Resources!" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="gofrench.png" />
+    <meta property="og:description" content="GoFrench is a portal to resources for learning French! It lets you quickly look up words and phrases, and it makes it easy to find helpful resources for learning and mastering the language." />
+    <meta name="description" content="GoFrench is a portal to resources for learning French! It lets you quickly look up words and phrases, and it makes it easy to find helpful resources for learning and mastering the language." />
+    <meta name="theme-color" content="#7ab6ff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ac7284406a.js" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainstyle.css" />
+
+    <!-- JQUERY Script -->
+    <script type="text/javascript" src="./jquery-1.4.3.min.js"></script>
+
+    <!-- Convo Script -->
+    <script type="text/javascript" src="convo.js"></script>
+
+    <!-- Favicon and Theme Stuff -->
+    <link rel="apple-touch-icon" href="gofrench.png" sizes="180x180" />
+    <link rel="icon" href="gofrench.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="gofrench.png" sizes="16x16" type="image/png" />
+</head>
+
+<body>
+    <!-- Title Bar -->
+    <div class="titleBar sticky">
+        <span class="menuToggle" onclick="goHome()"><span class="logo">GoFrench</span></span>
+    </div>
+
+    <!-- Main Stuff -->
+    <main>
+        <div class="cardIsland topMargin">
+            <h1><i class="fa-solid fa-message"></i>&nbsp;Démarreurs de conversation</h1>
+            <hr>
+            <h4>Nouvelle question:</h4>
+            <button onclick="noviceQuestion()">Facile</button>
+            <button onclick="difficultQuestion()">Difficile</button>
+            <button onclick="bonusQuestion()">Créative</button>
+            <hr>
+            <h2 id="convoLbl">Bonjour! Cliquez sur un bouton ci-dessus pour commencer.</h2>
+        </div>
+    </main>
+</body>
+
+</html>

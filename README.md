@@ -1,2 +1,0 @@
-# johnspahr.org
-Personal website.
