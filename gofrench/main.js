@@ -29,7 +29,7 @@ function txtChange(e) {
 
 //handle special chars buttons
 function specialChar(button) {
-    navigator.clipboard.writeText(button.textContent); //copy button text to clipboard
+    navigator.clipboard.writeText(button.innerHTML); //copy button text to clipboard
     alert("Copied character to clipboard."); //give user feedback
 }
 
@@ -41,13 +41,22 @@ function toggleChars(button) {
     if (specialChars.style.display == "inline") {
         //hide
         specialChars.style.display = "none";
-        button.textContent = "Show Accents";
-        button.innerHTML = "<i class=\"fas fa-chevron-down\"></i> Show Accents";
+        button.innerText = "Show Accents";
     } else {
         //show
         specialChars.style.display = "inline";
-        button.innerHTML = "<i class=\"fas fa-chevron-up\"></i> Hide Accents";
+        button.innerText = "Hide Accents";
     }
+}
+
+//open hamburger menu
+function openNav() {
+    document.getElementById('sidenavDrawer').style.width = '100%';
+}
+
+//close hamburger menu
+function closeNav() {
+    document.getElementById('sidenavDrawer').style.width = '0';
 }
 
 //handle search functionality
@@ -55,48 +64,33 @@ function getSite() {
     var inputString = document.getElementById('inputTxt').value.trim(); //trims input
     if (inputString != '') {
         //makes sure text box isn't blank
-        var count = (inputString.match(/ /g) || []).length; //gets number of spaces in text box.
+        var content = document.getElementById('inputTxt').value; //sets variable "content" to text box value
+        var countText = content.trim(); //removes unnecessary spaces at the end of text
+        var count = (countText.match(/ /g) || []).length; //gets number of spaces in text box.
         if (count == 0) {
             //no spaces
             //open wordreference
-            window.open('http://www.wordreference.com/enfr/' + inputString, '_blank');
+            window.open('http://www.wordreference.com/enfr/' + countText, '_blank');
         } else {
             //spaces
             //open linguee
             window.open(
                 'http://linguee.com/english-french/search?source=auto&query=' +
-                inputString,
+                countText,
                 '_blank'
             );
         }
-        document.getElementById('inputTxt').value = ''; //reset text input field
+        document.getElementById('inputTxt').value = '';
     } else {
         alert('Please enter a search query.'); //if input is blank
     }
 }
 
-function conjugate() {
-    //open wordreference word conjugation
-    var inputString = document.getElementById('inputTxt').value.trim(); //get input value
-
-    if (inputString != '') {
-        //open conjugation result in new tab
-        window.open(
-            'http://www.wordreference.com/conj/frverbs.aspx?v=' +
-            inputString,
-            '_blank'
-        );
-
-        document.getElementById('inputTxt').value = ''; //reset text input field
-    } else {
-        alert('Please enter a search query.'); //if input is blank
-    }
-}
 
 $(document).ready(function() {
     if ($(window).width() < 560) {
         //hide accents
         specialChars.style.display = "none";
-        document.getElementById("charsBtn").innerHTML = "<i class=\"fas fa-chevron-down\"></i> Show Accents";
+        document.getElementById("charsBtn").innerText = "Show Accents";
     }
 });
