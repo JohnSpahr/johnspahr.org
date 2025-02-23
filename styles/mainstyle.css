@@ -25,6 +25,13 @@ Do not copyeth or replicateth thy radeth website. - Not Shakespeare, but John
     font-size: 32px;
     margin-left: 10px;
     font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+.mainTitle:hover {
+    color: #c0cafc;
+    cursor: pointer;
 }
 
 .menuBtn {
@@ -34,6 +41,7 @@ Do not copyeth or replicateth thy radeth website. - Not Shakespeare, but John
     margin-right: 20px;
     border-radius: 25px;
     background-color: #222;
+    cursor: pointer;
 }
 
 nav {
@@ -52,7 +60,8 @@ nav {
     text-align: center;
 }
 
-.navMenu a {
+.navMenu a,
+.navMenu a:visited {
     color: #aaa;
     display: inline-block;
     margin: 10px;
@@ -60,7 +69,7 @@ nav {
 }
 
 .navMenu a:hover {
-    color: #ddd;
+    color: #9194a3;
 }
 
 .navMenu .selected {
@@ -82,9 +91,10 @@ nav {
 }
 
 .content .portrait {
-    width: 128px;
-    height: 128px;
-    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 2px solid #aaa;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -93,7 +103,7 @@ nav {
 .content .button,
 .spamspan {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 8px;
     margin-right: 10px;
     padding: 8px;
     background-color: #555;
@@ -105,8 +115,17 @@ nav {
 .content .button:hover,
 .menuBtn:hover,
 .spamspan:hover {
-    background-color: #4458be !important;
-    color: white
+    background-color: #5b76ff !important;
+    color: white;
+}
+
+.content a,
+.content a:visited {
+    color: #c0cafc !important;
+}
+
+.content a:hover {
+    color: #9194a3 !important;
 }
 
 html,
@@ -133,7 +152,7 @@ body {
 
 .banner {
     width: 100%;
-    height: 240px;
+    height: 350px;
     object-fit: contain;
     margin-top: 50px;
     border-bottom: 2px #aaa solid;
@@ -151,7 +170,12 @@ a {
 }
 
 a:hover {
-    color: #ddd;
+    cursor: pointer;
+    color: #9194a3;
+}
+
+a:visited {
+    color: white;
 }
 
 p {
@@ -185,8 +209,7 @@ ul li {
 .gallery img {
     display: inline;
     object-fit: contain;
-    width: 320px;
-    height: 240px;
+    width: 500px;
     margin: 5px;
     border-radius: 5px;
     border: 2px solid #aaa;
@@ -194,7 +217,7 @@ ul li {
 }
 
 table {
-  width: 100%;
+    width: 100%;
 }
 
 th {
@@ -206,6 +229,7 @@ td {
     padding: 4px;
     border-radius: 5px;
 }
+
 
 /* Footer */
 
