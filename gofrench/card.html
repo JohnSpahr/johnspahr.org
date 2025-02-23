@@ -52,26 +52,24 @@ Copyright (c) John Spahr, 2019-2023.
     <!-- Title Bar -->
     <div class="titleBar">
         <h4>GoFrench</h4>
-        <a href="index.html"><img width="48" src="res/search.png" />Home</a>
-        <a href="links.html"><img width="48" src="res/portal.png" />Links</a>
-        <a href="feed.html"><img width="48" src="res/feed.png" />Apps</a>
-        <hr />
+        <a href="index.html"><img width="48" src="res/search.png">Home</a>
+        <a href="links.html"><img width="48" src="res/portal.png">Links</a>
+        <a href="feed.html"><img width="48" src="res/feed.png">Apps</a>
+        <hr>
     </div>
 
     <!-- Main Stuff -->
     <main>
         <div id="cardConfigurator" class="cardIsland topMargin">
-            <h1>
-                <i class="fa-solid fa-address-card"></i>&nbsp;Créez votre carte d'identité
-            </h1>
-            <hr />
+            <h1><i class="fa-solid fa-address-card"></i>&nbsp;Créez votre carte d'identité</h1>
+            <hr>
             <p><b>Votre nom:</b></p>
             <input id="nameTxt" maxlength="90" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Votre nom..." />
-            <hr />
+            <hr>
             <p><b>Courte biographie:</b></p>
-            <textarea id="bioTxt" style="resize: vertical" onkeyup="textCounter(this, 'counterLbl', 1024);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez une courte biographie en français..."></textarea>
+            <textarea id="bioTxt" style="resize: vertical;" onkeyup="textCounter(this, 'counterLbl', 1024);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Écrivez une courte biographie en français..."></textarea>
             <p id="counterLbl">1024 character(s) remaining</p>
-            <hr />
+            <hr>
             <h2>Vos intérêts:</h2>
             <h3>J'aime...</h3>
             <input id="interest1" maxlength="90" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Donnez une activité..." />
@@ -79,31 +77,30 @@ Copyright (c) John Spahr, 2019-2023.
             <input id="interest3" maxlength="90" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Donnez une activité..." />
             <input id="interest4" maxlength="90" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Donnez une activité..." />
             <input id="interest5" maxlength="90" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Donnez une activité..." />
-            <hr />
+            <hr>
             <h2>Profils sociaux:</h2>
-            <p><i class="fa-brands fa-instagram"></i>&nbsp;<b>Instagram:</b></p>
+            <p><i class='fa-brands fa-instagram'></i>&nbsp;<b>Instagram:</b></p>
             <input id="instagramTxt" maxlength="60" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Entrez votre nom d'utilisateur Instagram..." />
-            <p><i class="fa-brands fa-snapchat"></i>&nbsp;<b>Snapchat:</b></p>
+            <p><i class='fa-brands fa-snapchat'></i>&nbsp;<b>Snapchat:</b></p>
             <input id="snapchatTxt" maxlength="60" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Entrez votre nom d'utilisateur Snapchat..." />
-            <p><i class="fa-brands fa-facebook"></i>&nbsp;<b>Facebook:</b></p>
+            <p><i class='fa-brands fa-facebook'></i>&nbsp;<b>Facebook:</b></p>
             <input id="facebookTxt" maxlength="60" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Entrez votre nom d'utilisateur Facebook..." />
-            <hr />
+            <hr>
             <h3>Une photo de vous:</h3>
-            <input type="file" id="imageUpload" />
-            <hr />
-            <button onclick="generateCard()">
-          <i class="fa-solid fa-download"></i>&nbsp;Télécharger la carte
-        </button>
+            <input type="file" id="imageUpload">
+            <hr>
+            <button onclick="generateCard()"><i class="fa-solid fa-download"></i>&nbsp;Télécharger la carte</button>
         </div>
         <div id="generatedCard" class="generatedCard cardIsland leftCard"></div>
 
-        <hr />
+        <hr>
 
         <p>
             &copy; 2024 John Spahr -
             <a href="https://github.com/johnspahr" target="_blank">More Software</a>
         </p>
     </main>
+
 </body>
 
 </html>
