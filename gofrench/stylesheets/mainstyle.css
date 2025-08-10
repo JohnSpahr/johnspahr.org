@@ -6,11 +6,11 @@
 \____/\____/_/   /_/   \___/_/ /_/\___/_/ /_/  /_.___/\__, /   \____/\____/_/ /_/_/ /_/   /____/ .___/\__,_/_/ /_/_/     
                                                      /____/                                   /_/                        
                                                      
-Copyright (c) John Spahr, 2019-2025. 
+Copyright (c) John Spahr, 2019-2023. 
 */
 
 body {
-  background-color: #eee;
+  background-color: #222;
   padding-bottom: 1%;
   font-family: 'Open Sans', 'Helvetica Neue', 'Lato', sans-serif;
 }
@@ -22,17 +22,18 @@ body {
 }
 
 hr {
-  border: 2px solid #999;
-  margin: 15px;
+  border: 2px solid #555;
+  margin-left: 15px;
+  margin-right: 15px;
   border-radius: 5px;
 }
 
 .search {
-  background-color: #fff;
-  color: #222;
+  background-color: #333;
+  color: white;
   font-size: 16px;
   height: 40px;
-  border: 2px solid #999;
+  border: 1px solid #fefefe;
   border-radius: 25px;
   text-align: center;
   padding: 5px, 2px, 5px, 2px;
@@ -49,19 +50,119 @@ hr {
 }
 
 a {
-  color: #152745;
-  text-decoration: none;
+  color: #afccff;
 }
 
 a:hover {
-  color: #2f5392;
+  color: #d6e8ff;
   text-decoration: none;
+}
+
+.logo,
+.toggleBtn {
+  margin-bottom: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 32px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #aaa;
+  display: inline-block;
+  transition: 0.5s;
+  width: 120px;
+  text-align: center;
+  display: inline-table;
+}
+
+.sidenav b {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.5s;
+  color: white;
+}
+
+.sidenav p {
+  color: #aaa;
+  padding: 8px 32px 8px 32px;
+}
+
+.sidenav h2 {
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  padding-top: 4px;
+}
+
+.sidenav a:hover {
+  color: #fefefe;
+}
+
+.sidenav .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-top: 4px;
+}
+
+.sidenav img {
+  width: 64px;
+  border-radius: 25px;
+  padding: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main {
+  transition: margin-left 0.1s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.titleBar {
+  background-color: black;
+  padding: 5px;
+}
+
+.logo:hover {
+  color: linear-gradient();
+  background: linear-gradient(to right, blue, white, red);
+  text-shadow: 0 0 2px #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main {
   text-align: center;
-  color: #222;
-  background-color: #eee;
+  color: #fefefe;
+  background-color: #222;
   margin-top: 1%;
   margin-left: 1%;
   margin-right: 1%;
@@ -69,108 +170,39 @@ main {
 }
 
 .island {
-  background-color: #eee;
-  color: #222;
+  background-color: #333;
+  color: #fefefe;
   margin-bottom: 25px;
   padding: 10px;
   text-align: center;
+  border: 1px solid #fefefe;
+  border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   max-width: 600px;
 }
 
-.toggleBtn {
-  background-color: #641b1b;
-}
-
-/* Title Bar Thing */
-
-.titleBar {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.titleBar a {
-  margin-right: 2px;
-  margin-left: 2px;
-  height: 38px;
-  display: inline-block;
-  width: 100px;
-}
-
-.titleBar img {
-  width: 100%;
-  object-fit: contain;
-  height: 38px;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.titleBar h4 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-family: cursive;
-  color: #000;
-  background: linear-gradient(to right, blue, white, red);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: black;
-  text-shadow: 3px 3px 1px black;
-  font-size: 50px;
-  -webkit-animation: glow 5s ease-in-out infinite alternate;
-  -moz-animation: glow 5s ease-in-out infinite alternate;
-  animation: glow 5s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px blue, 0 0 2px #1b0db6,
-      0 0 2px #3229b5, 0 0 2px #1e2f6c, 0 0 2px #140968;
-  }
-  to {
-    text-shadow: 0 0 2px #fff, 0 0 2px red, 0 0 2px #ff4d4d, 0 0 2px #ac2121,
-      0 0 2px #920f0f, 0 0 2px #900c0c, 0 0 2px #831818;
-  }
-}
-
-/* Links List */
-
-.links {
-  text-align: center;
-}
-
-.links a {
-  margin: 8px 32px 8px 32px;
-  font-size: 18px;
-  display: inline-block;
-  max-width: 120px;
-  vertical-align: top;
-}
-
-.links img {
-  display: block;
-  border-radius: 180px;
-  width: 100%;
-  height: 64px;
-  margin-bottom: 8px;
-  object-fit: contain;
+.menuToggle {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
 }
 
 /* Card Configurator */
 
 .cardIsland {
-  background-color: #fefefe;
-  color: #222;
+  background-color: #333;
+  color: #fefefe;
   margin-bottom: 25px;
   padding: 20px;
   text-align: center;
-  border: 2px solid #999;
+  border: 1px solid #fefefe;
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1000px;
+  width: 90%;
 }
 
 .cardIsland hr {
@@ -179,11 +211,11 @@ main {
 }
 
 .cardIsland textarea {
-  background-color: #eee;
-  color: #222;
+  background-color: #222;
+  color: white;
   font-size: 16px;
   height: 240px;
-  border: 2px solid #222;
+  border: 1px solid #fefefe;
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 8px;
@@ -193,10 +225,10 @@ main {
 }
 
 .cardIsland input {
-  background-color: #eee;
-  color: #222;
+  background-color: #222;
+  color: white;
   font-size: 16px;
-  border: 2px solid #222;
+  border: 1px solid #fefefe;
   border-radius: 25px;
   padding: 10px;
   margin-bottom: 8px;
@@ -240,18 +272,17 @@ main {
 }
 
 button {
-  background-color: #152745;
+  background-color: #222;
   color: white;
   font-size: 16px;
   border: 1px solid #fefefe;
   border-radius: 25px;
   padding: 10px 18px 10px 18px;
   margin: 2px;
-  cursor: pointer;
 }
 
 button:hover {
-  background-color: #2f5392;
+  background-color: #555;
 }
 
 .topMargin {
