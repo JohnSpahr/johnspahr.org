@@ -6,255 +6,255 @@
 \____/\____/_/   /_/   \___/_/ /_/\___/_/ /_/  /_.___/\__, /   \____/\____/_/ /_/_/ /_/   /____/ .___/\__,_/_/ /_/_/     
                                                      /____/                                   /_/                        
                                                      
-Copyright (c) John Spahr, 2019-2023. 
+Copyright (c) John Spahr, 2019-2025. 
 */
 
 body {
-    background-color: #eee;
-    padding-bottom: 1%;
-    font-family: 'Lato', sans-serif;
+  background-color: #eee;
+  padding-bottom: 1%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .sticky {
-    z-index: 1;
-    top: 0;
-    position: sticky;
+  z-index: 1;
+  top: 0;
+  position: sticky;
 }
 
 hr {
-    border: 2px solid #999;
-    margin: 15px;
-    border-radius: 5px;
+  border: 2px solid #999;
+  margin: 15px;
+  border-radius: 5px;
 }
 
 .search {
-    background-color: #fff;
-    color: #222;
-    font-size: 16px;
-    height: 40px;
-    border: 2px solid #999;
-    border-radius: 25px;
-    text-align: center;
-    padding: 5px, 2px, 5px, 2px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    max-width: 600px;
+  background-color: #fff;
+  color: #222;
+  font-size: 16px;
+  height: 40px;
+  border: 2px solid #999;
+  border-radius: 25px;
+  text-align: center;
+  padding: 5px, 2px, 5px, 2px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 600px;
 }
 
 .adaptive {
-    width: 90%;
-    max-width: 600px;
+  width: 90%;
+  max-width: 600px;
 }
 
 a {
-    color: #152745;
-    text-decoration: none;
+  color: #152745;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #2f5392;
-    text-decoration: none;
+  color: #2f5392;
+  text-decoration: none;
 }
 
 main {
-    text-align: center;
-    color: #222;
-    background-color: #eee;
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-    text-align: center;
+  text-align: center;
+  color: #222;
+  background-color: #eee;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  text-align: center;
 }
 
 .island {
-    background-color: #eee;
-    color: #222;
-    margin-bottom: 25px;
-    padding: 10px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    max-width: 600px;
+  background-color: #eee;
+  color: #222;
+  margin-bottom: 25px;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 600px;
 }
 
 .toggleBtn {
-    background-color: #641b1b;
+  background-color: #641b1b;
 }
-
 
 /* Title Bar Thing */
 
 .titleBar {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .titleBar a {
-    margin-right: 2px;
-    margin-left: 2px;
-    height: 38px;
-    display: inline-block;
-    width: 100px;
+  margin-right: 2px;
+  margin-left: 2px;
+  height: 38px;
+  display: inline-block;
+  width: 100px;
 }
 
 .titleBar img {
-    width: 100%;
-    object-fit: contain;
-    height: 38px;
-    margin-bottom: 8px;
-    display: block;
+  width: 100%;
+  object-fit: contain;
+  height: 38px;
+  margin-bottom: 8px;
+  display: block;
 }
 
 .titleBar h4 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-family: cursive;
-    color: #000;
-    background: linear-gradient(to right, blue, white, red);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: black;
-    text-shadow: 3px 3px 1px black;
-    font-size: 50px;
-    -webkit-animation: glow 5s ease-in-out infinite alternate;
-    -moz-animation: glow 5s ease-in-out infinite alternate;
-    animation: glow 5s ease-in-out infinite alternate;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: cursive;
+  color: #000;
+  background: linear-gradient(to right, blue, white, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: black;
+  text-shadow: 3px 3px 1px black;
+  font-size: 50px;
+  -webkit-animation: glow 5s ease-in-out infinite alternate;
+  -moz-animation: glow 5s ease-in-out infinite alternate;
+  animation: glow 5s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px blue, 0 0 2px #1b0db6, 0 0 2px #3229b5, 0 0 2px #1e2f6c, 0 0 2px #140968;
-    }
-    to {
-        text-shadow: 0 0 2px #fff, 0 0 2px red, 0 0 2px #ff4d4d, 0 0 2px #ac2121, 0 0 2px #920f0f, 0 0 2px #900c0c, 0 0 2px #831818;
-    }
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px blue, 0 0 2px #1b0db6,
+      0 0 2px #3229b5, 0 0 2px #1e2f6c, 0 0 2px #140968;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 2px red, 0 0 2px #ff4d4d, 0 0 2px #ac2121,
+      0 0 2px #920f0f, 0 0 2px #900c0c, 0 0 2px #831818;
+  }
 }
-
 
 /* Links List */
 
 .links {
-    text-align: center;
+  text-align: center;
 }
 
 .links a {
-    margin: 8px 32px 8px 32px;
-    font-size: 18px;
-    display: inline-block;
-    max-width: 120px;
-    vertical-align: top;
+  margin: 8px 32px 8px 32px;
+  font-size: 18px;
+  display: inline-block;
+  max-width: 120px;
+  vertical-align: top;
 }
 
 .links img {
-    display: block;
-    border-radius: 180px;
-    width: 100%;
-    height: 64px;
-    margin-bottom: 8px;
-    object-fit: contain;
+  display: block;
+  border-radius: 180px;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 8px;
+  object-fit: contain;
 }
-
 
 /* Card Configurator */
 
 .cardIsland {
-    background-color: #fefefe;
-    color: #222;
-    margin-bottom: 25px;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #999;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
+  background-color: #fefefe;
+  color: #222;
+  margin-bottom: 25px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #999;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
 }
 
 .cardIsland hr {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .cardIsland textarea {
-    background-color: #eee;
-    color: #222;
-    font-size: 16px;
-    height: 240px;
-    border: 2px solid #222;
-    border-radius: 25px;
-    padding: 10px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+  background-color: #eee;
+  color: #222;
+  font-size: 16px;
+  height: 240px;
+  border: 2px solid #222;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 .cardIsland input {
-    background-color: #eee;
-    color: #222;
-    font-size: 16px;
-    border: 2px solid #222;
-    border-radius: 25px;
-    padding: 10px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+  background-color: #eee;
+  color: #222;
+  font-size: 16px;
+  border: 2px solid #222;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 .generatedCard {
-    display: none;
+  display: none;
 }
 
 .generatedCard p,
 .generatedCard span,
 .bigText {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .leftCard {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .bubble {
-    background-color: #111;
-    color: white;
-    font-size: 24px;
-    padding: 12px;
-    margin: 10px;
-    border-radius: 25px;
+  background-color: #111;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 25px;
 }
 
 .bubbleSection .bubble {
-    display: inline-block;
-    margin: 10px;
+  display: inline-block;
+  margin: 10px;
 }
 
 .pfp {
-    width: 128px;
-    height: 128px;
-    border-radius: 25px;
+  width: 128px;
+  height: 128px;
+  border-radius: 25px;
 }
 
 button {
-    background-color: #152745;
-    color: white;
-    font-size: 16px;
-    border: 1px solid #fefefe;
-    border-radius: 25px;
-    padding: 10px 18px 10px 18px;
-    margin: 2px;
-    cursor: pointer;
+  background-color: #152745;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #fefefe;
+  border-radius: 25px;
+  padding: 10px 18px 10px 18px;
+  margin: 2px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #2f5392;
+  background-color: #2f5392;
 }
 
 .topMargin {
-    margin-top: 25px;
+  margin-top: 25px;
 }
