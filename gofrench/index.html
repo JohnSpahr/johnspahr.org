@@ -6,31 +6,45 @@
 \____/\____/_/   /_/   \___/_/ /_/\___/_/ /_/  /_.___/\__, /   \____/\____/_/ /_/_/ /_/   /____/ .___/\__,_/_/ /_/_/     
                                                      /____/                                   /_/                        
                                                      
-Copyright (c) John Spahr, 2019-2024. 
+Copyright (c) John Spahr, 2019-2025. 
 -->
 
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- Page Title! -->
     <title>GoFrench</title>
 
     <!-- Meta Stuff -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="John Spahr" />
-    <meta property="og:title" content="GoFrench: Your Portal for French Resources!" />
+    <meta
+      property="og:title"
+      content="GoFrench: Your Portal for French Resources!"
+    />
     <meta name="twitter:card" content="summary" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="gofrench.png" />
-    <meta property="og:description" content="GoFrench is your portal to resources for learning French!" />
-    <meta name="description" content="GoFrench is your portal to resources for learning French!" />
+    <meta
+      property="og:description"
+      content="GoFrench is your portal to resources for learning French!"
+    />
+    <meta
+      name="description"
+      content="GoFrench is your portal to resources for learning French!"
+    />
     <meta name="theme-color" content="#7ab6ff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta charset="UTF-8" />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/ac7284406a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ac7284406a.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="stylesheets/nustyle.css" />
@@ -45,79 +59,102 @@ Copyright (c) John Spahr, 2019-2024.
     <link rel="apple-touch-icon" href="gofrench.png" sizes="180x180" />
     <link rel="icon" href="gofrench.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="gofrench.png" sizes="16x16" type="image/png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Title Bar -->
     <div class="titleBar">
-        <h4>GoFrench</h4>
-        <a href="index.html"><img width="48" src="res/search.png">Home</a>
-        <a href="links.html"><img width="48" src="res/portal.png">Links</a>
-        <a href="feed.html"><img width="48" src="res/feed.png">Apps</a>
-        <hr>
+      <h4>GoFrench</h4>
+      <a href="index.html"><img width="48" src="res/search.png" />Home</a>
+      <a href="links.html"><img width="48" src="res/portal.png" />Links</a>
+      <a href="feed.html"><img width="48" src="res/feed.png" />Apps</a>
+      <hr />
     </div>
-
 
     <!-- Main Stuff -->
     <main>
-        <img class="logo topMargin" src="gofrench.png" alt="GoFrench" width="180px">
-        <br><br>
-        <input id="inputTxt" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onkeypress="return txtChange(event)" class="search" type="search" placeholder="Look up a word or phrase here..." />
-        <br>
-        <button onclick="getSite()">Look Up Word/Phrase</button>
-        <button onclick="conjugate()">Conjugate Verb</button>
-        <br><br>
-        <hr>
-        <h3>Special Characters</h3>
-        <div id="specialChars" style="display: inline;">
-            <p>Click to copy to clipboard (click and paste):</p>
-            <button onclick="specialChar(this)">«</button>
-            <button onclick="specialChar(this)">»</button>
-            <button onclick="specialChar(this)">à</button>
-            <button onclick="specialChar(this)">â</button>
-            <button onclick="specialChar(this)">æ</button>
-            <button onclick="specialChar(this)">ç</button>
-            <button onclick="specialChar(this)">é</button>
-            <button onclick="specialChar(this)">è</button>
-            <button onclick="specialChar(this)">ê</button>
-            <button onclick="specialChar(this)">ë</button>
-            <button onclick="specialChar(this)">ï</button>
-            <button onclick="specialChar(this)">î</button>
-            <button onclick="specialChar(this)">ô</button>
-            <button onclick="specialChar(this)">œ</button>
-            <button onclick="specialChar(this)">ù</button>
-            <button onclick="specialChar(this)">û</button>
-            <button onclick="specialChar(this)">ü</button>
-            <button onclick="specialChar(this)">ÿ</button>
-            <button onclick="specialChar(this)">€</button>
-            <button onclick="specialChar(this)">À</button>
-            <button onclick="specialChar(this)">Â</button>
-            <button onclick="specialChar(this)">Ä</button>
-            <button onclick="specialChar(this)">É</button>
-            <button onclick="specialChar(this)">È</button>
-            <button onclick="specialChar(this)">Ê</button>
-            <button onclick="specialChar(this)">Ë</button>
-            <button onclick="specialChar(this)">Î</button>
-            <button onclick="specialChar(this)">Ï</button>
-            <button onclick="specialChar(this)">Ô</button>
-            <button onclick="specialChar(this)">Œ</button>
-            <button onclick="specialChar(this)">Ù</button>
-            <button onclick="specialChar(this)">Û</button>
-            <button onclick="specialChar(this)">Ü</button>
-            <button onclick="specialChar(this)">Ÿ</button>
-            <br>
-        </div>
-        <button id="charsBtn" class="toggleBtn" onclick="toggleChars(this)"><i class="fas fa-chevron-up"></i> Hide Accents</button>
+      <img
+        class="logo topMargin"
+        src="gofrench.png"
+        alt="GoFrench"
+        width="180px"
+      />
+      <br /><br />
+      <input
+        id="inputTxt"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        onkeypress="return txtChange(event)"
+        class="search"
+        type="search"
+        placeholder="Look up a word or phrase here..."
+      />
+      <br />
+      <button onclick="getSite()">Look Up Word/Phrase</button>
+      <button onclick="conjugate()">Conjugate Verb</button>
+      <br /><br />
+      <hr />
+      <h3>Special Characters</h3>
+      <div id="specialChars" style="display: inline">
+        <p>Click to copy to clipboard (click and paste):</p>
+        <button onclick="specialChar(this)">«</button>
+        <button onclick="specialChar(this)">»</button>
+        <button onclick="specialChar(this)">à</button>
+        <button onclick="specialChar(this)">â</button>
+        <button onclick="specialChar(this)">æ</button>
+        <button onclick="specialChar(this)">ç</button>
+        <button onclick="specialChar(this)">é</button>
+        <button onclick="specialChar(this)">è</button>
+        <button onclick="specialChar(this)">ê</button>
+        <button onclick="specialChar(this)">ë</button>
+        <button onclick="specialChar(this)">ï</button>
+        <button onclick="specialChar(this)">î</button>
+        <button onclick="specialChar(this)">ô</button>
+        <button onclick="specialChar(this)">œ</button>
+        <button onclick="specialChar(this)">ù</button>
+        <button onclick="specialChar(this)">û</button>
+        <button onclick="specialChar(this)">ü</button>
+        <button onclick="specialChar(this)">ÿ</button>
+        <button onclick="specialChar(this)">€</button>
+        <button onclick="specialChar(this)">À</button>
+        <button onclick="specialChar(this)">Â</button>
+        <button onclick="specialChar(this)">Ä</button>
+        <button onclick="specialChar(this)">É</button>
+        <button onclick="specialChar(this)">È</button>
+        <button onclick="specialChar(this)">Ê</button>
+        <button onclick="specialChar(this)">Ë</button>
+        <button onclick="specialChar(this)">Î</button>
+        <button onclick="specialChar(this)">Ï</button>
+        <button onclick="specialChar(this)">Ô</button>
+        <button onclick="specialChar(this)">Œ</button>
+        <button onclick="specialChar(this)">Ù</button>
+        <button onclick="specialChar(this)">Û</button>
+        <button onclick="specialChar(this)">Ü</button>
+        <button onclick="specialChar(this)">Ÿ</button>
+        <br />
+      </div>
+      <button id="charsBtn" class="toggleBtn" onclick="toggleChars(this)">
+        <i class="fas fa-chevron-up"></i> Hide Accents
+      </button>
 
-        <hr>
-        <p><b>Like GoFrench?</b> <a href="https://www.paypal.com/donate/?business=2B8PNYTJEP2S2&no_recurring=0&item_name=Show+your+support+for+GoFrench+by+donating%21&currency_code=USD" target="_blank">DONATE via PayPal</a>!</p>
-        <hr>
-        <p>
-            &copy; 2024 John Spahr -
-            <a href="https://github.com/johnspahr" target="_blank">More Software</a>
-        </p>
-        <h6>Version 7.0.0</h6>
+      <hr />
+      <h3>Support GoFrench Development!</h3>
+      <p>
+        <b>Like GoFrench?</b>
+        <a
+          href="https://www.paypal.com/donate/?business=2B8PNYTJEP2S2&no_recurring=0&item_name=Help+fund+GoFrench+development%21+Never+expected%2C+always+appreciated.&currency_code=USD"
+          target="_blank"
+          >DONATE via PayPal</a
+        >!
+      </p>
+      <hr />
+      <p>
+        &copy; 2025 John Spahr -
+        <a href="https://github.com/johnspahr" target="_blank">More Software</a>
+      </p>
+      <h6>Version 7.0.1</h6>
     </main>
-</body>
-
+  </body>
 </html>
